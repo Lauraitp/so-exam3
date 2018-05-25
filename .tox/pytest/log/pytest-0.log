@@ -1,9 +1,0 @@
-actionid: pytest
-msg: getenv
-cmdargs: ['/usr/bin/python', '-m', 'virtualenv', '--python', '/usr/bin/python3', 'pytest']
-
-Using base prefix '/usr'
-New python executable in /home/operativos/so-exam3/.tox/pytest/bin/python3
-Also creating executable in /home/operativos/so-exam3/.tox/pytest/bin/python
-Installing setuptools, pip, wheel...done.
-Running virtualenv with interpreter /usr/bin/python3
