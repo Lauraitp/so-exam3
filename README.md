@@ -1,13 +1,13 @@
 # so-exam3
 **Nombre:** Laura Isabella Tabares Perez  
-**Código:** A00054120  
+**CÃ³digo:** A00054120  
 **URL github:** https://github.com/Lauraitp/so-exam3/tree/laura-exam3  
 
 ____________
 
 ## punto 3: Implementar un servicio web en Flask
 
-Para la impementación de este punto dese debe:   
+Para la impementaciÃ³n de este punto se debe:   
 1. crear una carpeta op_stats, en ella crear un archivo app.py y stats.py  
 En el archivo stats.py debe ir lo siguiente:  
 
@@ -32,9 +32,9 @@ class Stats():
     return disk_space
 ```  
 
-**NOTA:** Es importante tener instalada psutil.
+**NOTA:** Es importante tener instalada la dependecia psutil.
 
-Por otro lado en app.py debe ir:  
+Por otro lado, en app.py debe ir:  
 
 ```Console
 from flask import Flask
@@ -71,18 +71,19 @@ Para correr los dos archivos, primero se debe seguir el siguiente comando:
 ```Console
 python stats.py
 ```  
-Y a continuaciòn: :  
+Y a continuaciÃ³n: :  
 ```Console  
 python app.py  
 ```
-Para luego abrir Postman, que los descarè en  la siguinete pàgina: https://www.getpostman.com/  
-En la aplicación de postman se debe ir al adirección con la que se ingresó a Putty, en mi caso 192.168.1.21 con el puerto 8080 y la dirección cpu, para ver solo el consumo de la misma.    
+Para luego abrir Postman, que descargÃ© en  la siguinete pÃ¡gina: https://www.getpostman.com/  
+En la aplicaciÃ³n de postman debe ir la direcciÃ³n con la que se ingresÃ³ a Putty, en mi caso 192.168.1.21 con el puerto 8080 y la direcciÃ³n cpu, para ver solo el consumo de la misma. 192.168.1.21:8080/cpu
+
 ![](imagenes/cpu.png)
 
 para la memoria RAM disponible es: 192.168.1.21:8080/memory  
 ![](imagenes/memory.png)  
 
-Y por último para el espacio disponible en el disco: 192.168.1.21:8080/disk
+Y por Ãºltimo para el espacio disponible en el disco: 192.168.1.21:8080/disk
   
 ![](imagenes/disk.png)  
 
@@ -91,7 +92,7 @@ Y por último para el espacio disponible en el disco: 192.168.1.21:8080/disk
 
 ## Punto 4: Implemente las pruebas unitarias para los servicios empleando Fixtures y Mocks.  
 
-Para las pruebas unitarias, se implementa las siguientes lineas dcòdigo en el archivo test_stats.py de la carpeta tests:
+Para las pruebas unitarias, se implementa las siguientes lineas de cÃ³digo en el archivo test_stats.py de la carpeta tests:
 
 ```Console  
 import pytest
@@ -126,30 +127,30 @@ def test_get_disk_space(mocker, client):
   assert response.status_code == 200  
 ```  
 
-**Nota:**  instalar todos los paqueres de requierements.txt  
+**Nota:**  instalar todos los paquetes de requierements.txt  
 
-A continuaciòn se puede ver como ha funcionado con el comando:
+A continuaciÃ³n se puede ver como ha funcionado con el comando:
 ```
 pytest -v
 ```
   
 ![](imagenes/pytest.png)
 
-Por ùltimo, se ejecuta el comando tox para que las pruebas se ejecuten en un entorno virtual.  
+Por Ã¹ltimo, se ejecuta el comando tox para que las pruebas se ejecuten en un entorno virtual.  
 ```Console 
 tox -e pytest
 ```  
 
 ![](imagenes/tox.png)  
 
-## Punto 5: Emplee un servicio de integracíon continua que haga uso de las pruebas unitarias desarrolladas para validar sus commits.  
+## Punto 5: Emplee un servicio de integracÃ­on continua que haga uso de las pruebas unitarias desarrolladas para validar sus commits.  
 
-Para ingresar a Travis hay que acceder a la siguiente direcciòn: https://travis-ci.org/ e iniciar sesiòn con nuestra cuenta de github.   
-Luego buscamos el repositorio al que le queremos hacer las pruebas de integraciòn, el cual es so-exam3.  
+Para ingresar a Travis hay que acceder a la siguiente direcciÃ²n: https://travis-ci.org/ e iniciar sesiÃ³n con nuestra cuenta de github.   
+Luego buscamos el repositorio al que le queremos hacer las pruebas de integraciÃ³n, el cual es so-exam3.  
 ![](imagenes/travis1.png)  
 y lo activamos.
 
-Lo primero que realiza travis cada vez que hay un commit en nuestri repositorio es un archivo con nombre .travis.yml donde se nombran las dependencias necesarias.  
+Lo primero que realiza travis, cada vez que hay un commit en nuestro repositorio, es ejecutar un archivo con nombre .travis.yml donde se nombran las dependencias necesarias.  
 ```Console  
 sudo: false
 language: python
@@ -177,7 +178,7 @@ setup(
 ```  
 Para crear un paquete con el nombre de nuestra carpeta op_stats y las dos dependencias importantes: flask y psutil.  
 
-Por último se ejecuta le archivo tox.ini  
+Por Ãºltimo se ejecuta el archivo tox.ini  
 ```Console  
 [tox]
 envlist = pytest 
@@ -192,6 +193,8 @@ commands =
   pytest
 ```  
 Que ejecuta lo que se encuentra en requirements_dev.txt y el comando pytest.  
+
+
 Para ver si pasaron las pruebas.
 
 ![](imagenes/travis2.png)
