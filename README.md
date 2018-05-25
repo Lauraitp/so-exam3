@@ -196,4 +196,5 @@ Para ver si pasaron las pruebas.
 
 ![](imagenes/travis2.png)
 
+![](imagenes/travispull.png)  
 
