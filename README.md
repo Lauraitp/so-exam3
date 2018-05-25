@@ -80,14 +80,14 @@ En la aplicación de postman se debe ir al adirección con la que se ingresó a Put
 ![](imagenes/cpu.png)
 
 para la memoria RAM disponible es: 192.168.1.21:8080/memory  
-![](imagnes/memory.png)  
+![](imagenes/memory.png)  
 
 Y por último para el espacio disponible en el disco: 192.168.1.21:8080/disk
   
 ![](imagenes/disk.png)  
 
 
-![](imagnes/peticiones.png)  
+![](imagenes/peticiones.png)  
 
 ## Punto 4: Implemente las pruebas unitarias para los servicios empleando Fixtures y Mocks.  
 
